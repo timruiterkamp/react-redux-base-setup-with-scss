@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
-import 'flexboxgrid-sass';
 import './scss/index.scss';
 
 class App extends Component {
@@ -11,11 +10,15 @@ class App extends Component {
         
         <Header></Header>
 
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <section className="content">
+         <h2>Hi There, </h2>
+
+         <p>This is just a very basic setup of react with scss included and some mixins i use.<br />
+         Feel free to edit everything starting with the src/App.js.</p>
+        </section>
 
         <Footer></Footer>
+
       </div>
     );
   }
