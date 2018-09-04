@@ -10,10 +10,10 @@ class App extends Component {
         <Header></Header>
 
         <section className="content">
-         <h2>Hi There, </h2>
+          <h2>Hi There, </h2>
 
-         <p>This is just a very basic setup of react with scss included and some mixins i use.<br />
-         Feel free to edit everything starting with the src/App.js.</p>
+          <p>This is just a very basic setup of react with scss included and some mixins i use.<br />
+          Feel free to edit everything starting with the src/App.js.</p>
         </section>
 
         <Footer></Footer>
