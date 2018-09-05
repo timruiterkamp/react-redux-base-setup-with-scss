@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Header from './components/header';
-import Footer from './components/footer';
-import InputPreview from './components/inputPreview';
+import Header from '../components/header';
+import Footer from '../components/footer';
+import InputPreview from '../components/inputPreview';
 import { connect } from 'react-redux';
-import {setMessage} from './actions/message';
-
+import { setMessage } from '../actions/message';
+import { Link } from 'react-router-dom';
 class App extends Component {
 
   _onChange = (value) => {
@@ -22,6 +22,10 @@ class App extends Component {
         value={message}
         onChange={this._onChange}/>
 
+        <Link to='/about'>
+        <button>Go to About</button>
+        </Link>
+        
         <section className="content">
           <h2>Hi There, </h2>
 
