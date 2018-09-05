@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
+import InputPreview from './components/inputPreview';
+import { connect } from 'react-redux';
+import {setMessage} from './actions/message';
 
 class App extends Component {
+
+  _onChange = (value) => {
+    this.props.dispatch(setMessage(value))
+  }
+
   render() {
+    const {message} = this.props.messageReducer;
     return (
       <div className="App">
         
         <Header></Header>
+
+        <InputPreview 
+        value={message}
+        onChange={this._onChange}/>
 
         <section className="content">
           <h2>Hi There, </h2>
@@ -23,4 +36,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(state => state)(App);
